@@ -72,3 +72,15 @@ foo numbers do |key,value|
   puts "#{key} + #{value} = #{key + value}"
   puts '___'
 end
+
+#lambda exemplar de calculo 
+
+my_lambda = lambda do |numbers|
+  puts "numero atual + proximo numero"
+  numbers.each_index do |index|
+    break if index == numbers.length - 1
+
+    puts "(#{numbers[index]}) + (#{numbers[index + 1]})"
+    puts numbers[index] + numbers[index + 1]
+  end
+  end
